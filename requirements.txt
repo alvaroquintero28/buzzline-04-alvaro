@@ -89,23 +89,44 @@ loguru
 python-dotenv
 
 # ======================================================
-# DATA ANALYSIS AND VISUALIZATION
+# DATA ANALYSIS 
 # ======================================================
 
-# Numerical computations
+# Numerical computations and arrays (20-30 MB)
 numpy
 
-# Data manipulation and analysis
+# Data manipulation and analysis (built on numpy, 10-20 MB)
 pandas
 
-# Data visualization libraries
+# ======================================================
+# VISUALIZATION
+# ======================================================
+
+# Core library for creating visualizations (~30 MB)
 matplotlib
+
+# Statistical data visualization library built on matplotlib (~2-5 MB)
 seaborn
-plotly
+
+# Interactive plotting library, often used with Shiny apps (~20-25 MB)
+#plotly
+
+# ======================================================
+# GUI BACKEND FOR MATPLOTLIB ANIMATIONS (macOS/Linux only)
+# ======================================================
+
+# Qt-based GUI framework for interactive plotting and animations (~50-60 MB)
+PyQt6; sys_platform != "win32"
 
 # ======================================================
 # KAFKA MESSAGE BROKER INTEGRATION
 # ======================================================
 
-# Apache Kafka Python client
+# Apache Kafka Python client (six was removed so add it separately)
 kafka-python
+six
+
+# Alternative: pin the older version.
+# If you want to use the older version of kafka-python,
+# comment out the two lines above and uncomment the line below.
+#kafka-python==2.0.2
