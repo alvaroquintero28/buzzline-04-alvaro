@@ -182,7 +182,7 @@ python3 -m consumers.csv_consumer_case
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.project_producer_alvaro
+python3 -m producers.project_producer_case
 ```
 
 Mac/Linux:
