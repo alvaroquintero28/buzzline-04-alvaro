@@ -1,4 +1,4 @@
-# buzzline-04-case
+# buzzline-04-alvaro
 
 We can analyze and visualize different types of streaming data as the information arrives.
 
@@ -35,8 +35,18 @@ Use your README.md to record your workflow and commands.
 
 Follow the instructions in [MANAGE-VENV.md](https://github.com/denisecase/buzzline-01-case/docs/MANAGE-VENV.md) to:
 1. Create your .venv
+```zsh
+python3 -m venv .venv
+```
 2. Activate .venv
+```zsh
+source .venv/bin/activate
+```
 3. Install the required dependencies using requirements.txt.
+```zsh
+python3 -m pip install --upgrade pip setuptools wheel
+python3 -m pip install --upgrade -r requirements.txt
+```
 
 ## Task 4. Start Zookeeper and Kafka (2 Terminals)
 
@@ -44,8 +54,17 @@ If Zookeeper and Kafka are not already running, you'll need to restart them.
 See instructions at [SETUP-KAFKA.md] to:
 
 1. Start Zookeeper Service ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-7-start-zookeeper-service-terminal-1))
+```zsh
+cd ~/kafka
+chmod +x zookeeper-server-start.sh
+bin/zookeeper-server-start.sh config/zookeeper.properties
+```
 2. Start Kafka ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-8-start-kafka-terminal-2))
-
+```zsh
+cd ~/kafka
+chmod +x kafka-server-start.sh
+bin/kafka-server-start.sh config/server.properties
+```
 ---
 
 ## Task 5. Start a Basic (File-based, not Kafka) Streaming Application
@@ -53,6 +72,7 @@ See instructions at [SETUP-KAFKA.md] to:
 This will take two terminals:
 
 1. One to run the producer which writes to a file in the data folder. 
+
 2. Another to run the consumer which reads from the dynamically updated file. 
 
 ### Producer Terminal
@@ -61,13 +81,6 @@ Start the producer to generate the messages.
 
 In VS Code, open a NEW terminal.
 Use the commands below to activate .venv, and start the producer. 
-
-Windows:
-
-```shell
-.venv\Scripts\activate
-py -m producers.basic_json_producer_case
-```
 
 Mac/Linux:
 ```zsh
@@ -81,12 +94,6 @@ Start the associated consumer that will process and visualize the messages.
 
 In VS Code, open a NEW terminal in your root project folder. 
 Use the commands below to activate .venv, and start the consumer. 
-
-Windows:
-```shell
-.venv\Scripts\activate
-py -m consumers.basic_json_consumer_case
-```
 
 Mac/Linux:
 ```zsh
@@ -118,8 +125,17 @@ For each one, you will need to:
 4. Know how to use the -m (module flag to run your file as a module).
 5. Know the full name of the module you want to run. 
    - Look in the producers folder for json_producer_case.
+  Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m producers.json_producer_case
+```
    - Look in the consumers folder for json_consumer_case.
-
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m consumers.json_consumer_case
+```
 
 ### Review the Application Code
 
@@ -150,8 +166,17 @@ For each one, you will need to:
 4. Know how to use the -m (module flag to run your file as a module).
 5. Know the full name of the module you want to run. 
    - Look in the producers folder for csv_producer_case.
+    Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m producers.csv_producer_case
+```
    - Look in the consumers folder for csv_consumer_case.
-
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m consumers.csv_consumer_case
+```
 ### Review the Application Code
 
 Review the code for both the producer and the consumer. 
