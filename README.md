@@ -190,7 +190,7 @@ Mac/Linux:
 source .venv/bin/activate
 python3 -m consumers.project_consumer_alvaro
 ```
-This Python script consumes JSON messages from a Kafka topic, extracts author names from the messages, counts the occurrences of each author, and visualizes the author counts in real-time using a bar chart generated with Matplotlib.  It demonstrates a way to track and display real-time data from a streaming source (Kafka). The bar chart displays the counts of messages for each author.  The x-axis represents the author names, and the y-axis represents the corresponding message count. The chart is interactive, updating in real-time as new messages are processed from the Kafka topic.  This real-time visualization allows for a quick and intuitive way to observe trends in author activity.
+This Python script consumes JSON messages from a Kafka topic, extracts author names from the messages, generates the averages of occurrences of each author, and visualizes the author counts in real-time using a bar chart generated with Matplotlib.  It demonstrates a way to track and display real-time data from a streaming source (Kafka). The bar chart displays the counts of messages for each author.  The x-axis represents the author names, and the y-axis represents the corresponding message count. The chart is interactive, updating in real-time as new messages are processed from the Kafka topic.  This real-time visualization allows for a quick and intuitive way to observe trends in author activity.
 
 ### Review the Application Code
 
