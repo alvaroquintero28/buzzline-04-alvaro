@@ -177,6 +177,20 @@ Mac/Linux:
 source .venv/bin/activate
 python3 -m consumers.csv_consumer_case
 ```
+
+## Task 8. Running the Producer & Consumer
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m producers.project_producer_alvaro
+```
+
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m consumers.project_consumer_alvaro
+```
+
 ### Review the Application Code
 
 Review the code for both the producer and the consumer. 
