@@ -178,7 +178,7 @@ source .venv/bin/activate
 python3 -m consumers.csv_consumer_case
 ```
 
-## Task 8. Running the Producer & Consumer
+## Task 8. Running the Project Producer & Consumer
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
